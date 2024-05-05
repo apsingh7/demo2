@@ -16,4 +16,9 @@ public class FirstController {
     public ResponseEntity<Test> method(@ModelAttribute Test test){
         return new ResponseEntity<>(test, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/first2")
+    public ResponseEntity<String> method2(){
+        return new ResponseEntity<>("test api", HttpStatus.OK);
+    }
 }
